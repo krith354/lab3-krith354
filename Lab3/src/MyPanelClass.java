@@ -28,36 +28,44 @@ public class MyPanelClass extends JPanel {
                         int y4 = myInsets.top;
                         int width = x2 - x1;
                         int height = y2 - y1;
- 
-                        //Paint the background
-                        g.setColor(Color.YELLOW);
-                        g.fillRect(x1, y1, width + 1, height + 1);
-                        //Draw a star
-                        Polygon p2 = new Polygon();
-                        p2.addPoint(x1 + 25, y1 + 73);
-                        p2.addPoint(x1 + 41, y1 + 73);
-                        p2.addPoint(x1 + 47, y1 + 58);
-                        p2.addPoint(x1 + 53, y1 + 73);
-                        p2.addPoint(x1 + 69, y1 + 73);
-                        p2.addPoint(x1 + 56, y1 + 83);
-                        p2.addPoint(x1 + 61, y1 + 98);
-                        p2.addPoint(x1 + 47, y1 + 88);
-                        p2.addPoint(x1 + 34, y1 + 98);
-                        p2.addPoint(x1 + 38, y1 + 83);
-                        g.setColor(Color.WHITE);
-                        g.drawPolygon(p2);
                         
-//                        //Draw an arrow
-//                        Polygon p = new Polygon();
-//                        p.addPoint(x1 + 5, y1 + 25);
-//                        p.addPoint(x1 + 20, y1 + 10);
-//                        p.addPoint(x1 + 35, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 25);
-//                        p.addPoint(x1 + 25, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 45);
-//                        p.addPoint(x1 + 15, y1 + 25);
-//                        g.setColor(Color.BLUE);
-//                        g.fillPolygon(p);
+                        //Paint the background
+                        g.setColor(Color.WHITE);
+                        g.fillRect(x1, y1, width + 1, height + 1);
+                        
+                        //Red Rectangle 1
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y1, width + 1, height/5);
+                        //Red Rectangle 2
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, y2/2 - (height/5)/2, width + 1, height/5);
+                        //Red Rectangle 1
+                        g.setColor(Color.RED);
+                        g.fillRect(x1, height - height/5 + 1, width + 1, height/5);
+                        
+                        //Draw an arrow
+                        Polygon p = new Polygon();
+                        p.addPoint(x1, y1);
+                        p.addPoint(width/2 + 10, height/2);
+                        p.addPoint(x1, height);
+                        g.setColor(Color.BLUE);
+                        g.fillPolygon(p);
+                        
+                      //Draw a star
+                        Polygon p2 = new Polygon();
+                        p2.addPoint(x1 + (width/4 - 88/3), y1 + (height/2 - 10/3));//48
+                        p2.addPoint(x1 + (width/4 - 53/3), y1 + (height/2 - 10/3));//32
+                        p2.addPoint(x1 + (width/4 - 44/3), y1 + (height/2 - 40/3));//11
+                        p2.addPoint(x1 + (width/4 - 11), y1 + (height/2 - 10/3));//20
+                        p2.addPoint(x1 + (width/4), y1 + (height/2 - 10/3));//4
+                        p2.addPoint(x1 + (width/4 - 44/3 + 5867/1000), y1 + (height/2 + 8/3));//27
+                        p2.addPoint(x1 + (width/4 + 4889/500 - 44/3), y1 + (height/2 + 40/3));//37
+                        p2.addPoint(x1 + (width/4 - 44/3), y1 + (height/2 + 40/6));//41
+                        p2.addPoint(x1 + (width/4 - 4889/500 - 44/3), y1 + (height/2 + 40/3));//64
+                        p2.addPoint(x1 + (width/4 - 5867/1000 - 44/3), y1 + (height/2 + 8/3));//45
+                        g.setColor(Color.WHITE);
+                        g.fillPolygon(p2);
+                        
                         
 //                        //Draw a circle
 //                        g.setColor(Color.LIGHT_GRAY);
